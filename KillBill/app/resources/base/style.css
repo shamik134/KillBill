@@ -1,0 +1,32 @@
+/* line 4, ../sass/sass/style.scss */
+.loginLabel {
+  text-align: center;
+}
+
+/* line 8, ../sass/sass/style.scss */
+.fbLogin {
+  text-align: center;
+  background-color: #5F78AB;
+  border-bottom: 1px solid #1A356E;
+  border-radius: 1px 1px 1px 1px;
+  border-top: 1px solid #879AC0;
+  color: white;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 200;
+  margin: 10px auto;
+  overflow: hidden;
+  padding: 3px 7px;
+  cursor: pointer;
+  display: block;
+  width: 130px;
+}
+
+/* line 26, ../sass/sass/style.scss */
+.dashboard {
+  font-size: 20px;
+}
+/* line 28, ../sass/sass/style.scss */
+.dashboard .tmp-dashboard-item {
+  margin-top: 20px;
+}

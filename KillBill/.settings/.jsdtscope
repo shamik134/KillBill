@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="app"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/bootstrapping"/>
+	<classpathentry excluding="validators/" kind="src" path="frameworks/The-M-Project/modules/core/datastore"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/core/datastore/validators"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/core/foundation"/>
+	<classpathentry excluding="cypher_algorithms/" kind="src" path="frameworks/The-M-Project/modules/core/utility"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/core/utility/cypher_algorithms"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/d8"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/jquery"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/jquery_mobile"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/jquery_mobile_plugins/mobiscroll"/>
+	<classpathentry excluding="dialogs/" kind="src" path="frameworks/The-M-Project/modules/ui"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/ui/dialogs"/>
+	<classpathentry kind="src" path="frameworks/The-M-Project/modules/underscore"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

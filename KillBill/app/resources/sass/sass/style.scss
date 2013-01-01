@@ -1,0 +1,31 @@
+@import "_base.scss";
+
+
+.loginLabel{
+	text-align	: center;
+}
+
+.fbLogin{
+	text-align: center;
+	background-color: #5F78AB;
+	border-bottom	: 1px solid #1A356E;
+	border-radius	: 1px 1px 1px 1px;
+	border-top		: 1px solid #879AC0;
+	color			: white;
+	font-family		: Arial;
+	font-size		: 14px;
+	font-weight		: 200;
+	margin			: 10px auto;
+	overflow		: hidden;
+	padding			: 3px 7px;
+	cursor			: pointer;
+	display			: block;
+	width			: 130px;
+}
+
+.dashboard{
+	font-size	: 20px;
+	.tmp-dashboard-item{
+		margin-top	: 20px;
+	}
+}
