@@ -16,8 +16,12 @@ KillBill.appCtrl = M.Controller.extend({
 		this.set('items', KillBill.appCtrl.items);
 	},
 
-	login: function(page){
+	moveTo: function(page){
 		this.switchToPage(page);
+	},
+
+	login: function(){
+		this.switchToPage('home');
 	},
 
 	fbLoad: function(){
