@@ -1,5 +1,9 @@
 @import "_base.scss";
 
+.right{
+	float: right;
+	right: 15px;
+}
 
 .loginLabel{
 	text-align	: center;
@@ -28,4 +32,48 @@
 	.tmp-dashboard-item{
 		margin-top	: 20px;
 	}
+}
+
+.required{
+	&:after{
+		content: '*';
+	}
+}
+
+.header{
+	font-size: 20px;
+	margin: 5px 15px 0;
+}
+
+.inputLabel{
+	display: inline-block;
+}
+
+.instruction{
+	font-style: italic;
+    margin-left: 10px;
+}
+
+.button{
+	display: inline-block;
+	&.right{
+		.ui-icon-arrow-r{
+			right: 10px;
+			left: auto;
+		}
+		&.ui-btn-icon-left{
+			.ui-btn-text{
+				top: 1px;
+				padding-left: 15px;
+			}
+			.ui-btn-inner{
+				padding-left: 0;
+				padding-right: 40px;
+			}
+		}
+	}
+}
+
+.ui-listview-filter{
+	margin: 0;
 }

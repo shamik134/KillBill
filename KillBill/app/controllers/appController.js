@@ -10,6 +10,11 @@ KillBill.appCtrl = M.Controller.extend({
         value: 'edit'
 	}],
 
+	fbFriends: null,
+	selectedFriends: null,
+
+	page: '',
+
 	APP_ID: 481947728510763,
 
 	init: function(){
@@ -24,6 +29,10 @@ KillBill.appCtrl = M.Controller.extend({
 		this.switchToPage('home');
 	},
 
+	setData: function(name, value){
+		this.set(name, value);
+	},
+
 	fbLoad: function(){
 		window.fbAsyncInit = function() {
 			FB.init({
@@ -36,14 +45,16 @@ KillBill.appCtrl = M.Controller.extend({
 
 			FB.getLoginStatus(function(response) {
 				if(response.authResponse){
-					KillBill.appCtrl.getFBDate(function(res){
+					KillBill.appCtrl.getFBData(function(res){
 						var obj = {
 							fbProfile: res,
-							id: res.is
+							fbId: res.id
 						};
 						KillBill.userCtrl.create(obj, function(res){
-							console.log(res);
-							KillBill.appCtrl.moveTo('home');
+							if(res[0])
+							{
+								KillBill.appCtrl.moveTo('home');
+							}
 						});
 					});
 				}else{
@@ -62,8 +73,17 @@ KillBill.appCtrl = M.Controller.extend({
 		document.getElementById('m_4').appendChild(e);
 	},
 
-	getFBDate: function(callback){
+	getFBData: function(callback){
 		FB.api('/me', callback);
+	},
+
+	getFBFriends: function(callback){
+		var me = this;
+		FB.api('/me/friends?fields=id,name,picture', function(res){
+			KillBill.appCtrl.setData('fbFriends', res.data);
+			KillBill.appCtrl.setData('selectedFriends', []);
+			callback();
+		});
 	}
 
 });

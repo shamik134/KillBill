@@ -1,8 +1,8 @@
 KillBill.tabs = M.TabBarView.design({
 
-    childViews: 'user report setting',
+    childViews: 'user bill group setting',
 
-    anchorLocation: M.TOP,
+    anchorLocation: M.BOTTOM,
 
     transition: M.TRANSITION.NONE,
 
@@ -11,20 +11,30 @@ KillBill.tabs = M.TabBarView.design({
     user: M.TabBarItemView.design({
         value: M.I18N.l('home'),
         page: 'home',
-        isActive: NO
+        isActive: NO,
+        icon:'home'
 
     }),
 
-    report: M.TabBarItemView.design({
-    	value: M.I18N.l('report'),
-    	page: 'report',
-    	isActive: NO
+    bill: M.TabBarItemView.design({
+    	value: M.I18N.l('bill'),
+    	page: 'bill',
+    	isActive: NO,
+    	icon: 'dollar'
+    }),
+
+    group: M.TabBarItemView.design({
+    	value: M.I18N.l('group'),
+    	page: 'group',
+    	isActive: NO,
+    	icon: 'person'
     }),
 
     setting: M.TabBarItemView.design({
     	value: M.I18N.l('settings'),
     	page: 'settings',
-    	isActive: NO
+    	isActive: NO,
+    	icon: 'gear'
     })
 
 });

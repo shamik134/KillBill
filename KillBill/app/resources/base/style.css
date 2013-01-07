@@ -1,9 +1,15 @@
-/* line 4, ../sass/sass/style.scss */
+/* line 3, ../sass/sass/style.scss */
+.right {
+  float: right;
+  right: 15px;
+}
+
+/* line 8, ../sass/sass/style.scss */
 .loginLabel {
   text-align: center;
 }
 
-/* line 8, ../sass/sass/style.scss */
+/* line 12, ../sass/sass/style.scss */
 .fbLogin {
   text-align: center;
   background-color: #5F78AB;
@@ -22,11 +28,58 @@
   width: 130px;
 }
 
-/* line 26, ../sass/sass/style.scss */
+/* line 30, ../sass/sass/style.scss */
 .dashboard {
   font-size: 20px;
 }
-/* line 28, ../sass/sass/style.scss */
+/* line 32, ../sass/sass/style.scss */
 .dashboard .tmp-dashboard-item {
   margin-top: 20px;
+}
+
+/* line 38, ../sass/sass/style.scss */
+.required:after {
+  content: '*';
+}
+
+/* line 43, ../sass/sass/style.scss */
+.header {
+  font-size: 20px;
+  margin: 5px 15px 0;
+}
+
+/* line 48, ../sass/sass/style.scss */
+.inputLabel {
+  display: inline-block;
+}
+
+/* line 52, ../sass/sass/style.scss */
+.instruction {
+  font-style: italic;
+  margin-left: 10px;
+}
+
+/* line 57, ../sass/sass/style.scss */
+.button {
+  display: inline-block;
+}
+/* line 60, ../sass/sass/style.scss */
+.button.right .ui-icon-arrow-r {
+  right: 10px;
+  left: auto;
+}
+/* line 65, ../sass/sass/style.scss */
+.button.right.ui-btn-icon-left .ui-btn-text {
+  top: 1px;
+  padding-left: 15px;
+}
+/* line 69, ../sass/sass/style.scss */
+.button.right.ui-btn-icon-left .ui-btn-inner {
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+/* line 77, ../sass/sass/style.scss */
+.ui-listview-filter {
+  margin: 0;
 }

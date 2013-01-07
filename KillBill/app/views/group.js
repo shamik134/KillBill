@@ -1,6 +1,6 @@
 m_require('app/views/tabs.js');
 
-KillBill.report = M.PageView.design({
+KillBill.group = M.PageView.design({
 
 	childViews: 'tabs',
 

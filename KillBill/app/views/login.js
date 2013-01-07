@@ -3,7 +3,7 @@ KillBill.login = M.PageView.design({
 	childViews:'content',
 
 	APP_ID: 481947728510763,
-	ipAddress: 'http://192.168.1.8:8000',
+	ipAddress: 'http://127.0.0.1:8000',
 
 	events:{
 		pagebeforeshow: {

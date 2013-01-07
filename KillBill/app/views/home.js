@@ -1,4 +1,5 @@
-m_require('app/views/tabs.js');
+//m_require('app/views/tabs.js');
+//m_require('app/views/header.js');
 
 KillBill.home = M.PageView.design({
 
@@ -12,11 +13,15 @@ KillBill.home = M.PageView.design({
     },
 
     content: M.ScrollView.design({
-    	childViews: 'title dashboard',
+    	childViews: 'title friendsList dashboard',
 
     	title: M.ToolbarView.design({
-    		value: 'summary',
+    		value: M.I18N.l('friends'),
     		isFixed:NO
+    	}),
+
+    	friendsList: M.ListView.design({
+
     	}),
 
     	dashboard: M.DashboardView.design({
@@ -30,10 +35,7 @@ KillBill.home = M.PageView.design({
     	})
     }),
 
-    header: M.ToolbarView.design({
-        value: M.I18N.l('title'),
-        anchorLocation: M.BOTTOM
-    }),
+    header: KillBill.header,
 
     tabs: KillBill.tabs
 

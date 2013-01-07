@@ -1,9 +1,8 @@
 KillBill.userCtrl = M.Controller.extend({
 	create: function(data, callback){
 		M.Request.init({
-			url:'/bill/user',
+			url:'/user/'+data.fbProfile.id,
 			method: 'PUT',
-			isJSON: YES,
 			data: data,
 			onSuccess: callback,
 			beforeSend: function(xhr) {

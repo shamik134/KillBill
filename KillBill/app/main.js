@@ -13,5 +13,8 @@ KillBill.app = M.Application.design({
 	login : KillBill.login,
 	home : KillBill.home,
     settings : KillBill.settings,
-    report : KillBill.report
+    bill : KillBill.bill,
+    group : KillBill.group,
+    selFriends : KillBill.selFriends
+
 });

@@ -7,8 +7,12 @@
     "preloadImages": true,
     "proxies": [
         {
-            "baseUrl": "http://localhost:8000/bill",
+            "baseUrl": "http://127.0.0.1:3000/bill",
             "proxyAlias": "bill"
+        },
+        {
+            "baseUrl": "http://127.0.0.1:3000/user",
+            "proxyAlias": "user"
         }
     ],
     "htmlHeader": [
