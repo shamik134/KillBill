@@ -5,6 +5,15 @@
 	right: 15px;
 }
 
+.left{
+	float: left;
+	margin-left: 15px;
+}
+
+.clearLeft{
+	clear: left;
+}
+
 .loginLabel{
 	text-align	: center;
 }
@@ -56,6 +65,7 @@
 
 .button{
 	display: inline-block;
+	margin-left: 10px;
 	&.right{
 		.ui-icon-arrow-r{
 			right: 10px;
@@ -75,5 +85,65 @@
 }
 
 .ui-listview-filter{
-	margin: 0;
+	margin: 0 auto;
+    width: 98%;
+}
+
+.friendsList{
+	height: 290px;
+    margin: 0 auto 10px;
+    overflow: auto;
+    width: 98%;
+    li{
+    	img{
+    		float: left;
+    	}
+    }
+}
+
+.hide{
+	display: none;
+}
+
+.removeIcon, .editIcon, .checkIcon{
+	cursor: pointer;
+	margin: auto;
+}
+
+.selectedFriends{
+	margin: 10px auto;
+    width: 98%;
+	thead{
+		tr{
+			background-color: #aaa;
+		}
+	}
+	tbody
+	{
+		tr{
+			.tmp-table-td{
+				clear: none;
+				input{
+					border-radius: 3px 3px 3px 3px;
+    				box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+    				margin: 0 25%;
+    				padding-left: 3px;
+    				padding-top: 2px;
+    				width: 50%;
+				}
+			}
+			&:nth-child(odd){
+				background-color: #eaeaea;
+			}
+			&:nth-child(even){
+				background-color: #ccc;
+			}
+		}
+	}
+}
+
+.amtBox{
+	.userAmt{
+		display: inline-block;
+	}
 }

@@ -21,15 +21,22 @@ KillBill.bill = M.PageView.design({
 		}),
 
 		eventInput: M.TextFieldView.design({
-
 		}),
+
 		amtLabel: M.LabelView.design({
 			value: M.I18N.l('amt'),
 			cssClass: 'inputLabel required'
 		}),
 
 		amtInput: M.TextFieldView.design({
-
+            contentBinding: {
+                target: KillBill.billCtrl,
+                property: 'billInput'
+            },
+            contentBindingReverse: {
+                target: KillBill.billCtrl,
+                property: 'billInput'
+            }
 		}),
 
 		dateLabel: M.LabelView.design({

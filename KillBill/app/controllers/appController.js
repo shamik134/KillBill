@@ -11,14 +11,19 @@ KillBill.appCtrl = M.Controller.extend({
 	}],
 
 	fbFriends: null,
-	selectedFriends: null,
+	summaryList: null,
+	selectedFriends: {
+		content: [],
+	},
 
 	page: '',
 
 	APP_ID: 481947728510763,
 
+	userData: null,
+
 	init: function(){
-		this.set('items', KillBill.appCtrl.items);
+		KillBill.billCtrl.getList(KillBill.appCtrl.userData.id, KillBill.billCtrl.normalizeUserSummary);
 	},
 
 	moveTo: function(page){
@@ -50,6 +55,7 @@ KillBill.appCtrl = M.Controller.extend({
 							fbProfile: res,
 							fbId: res.id
 						};
+						KillBill.appCtrl.setData('userData', res);
 						KillBill.userCtrl.create(obj, function(res){
 							if(res[0])
 							{
@@ -80,8 +86,15 @@ KillBill.appCtrl = M.Controller.extend({
 	getFBFriends: function(callback){
 		var me = this;
 		FB.api('/me/friends?fields=id,name,picture', function(res){
+			for(var i=0; i<res.data.length; i++){
+				res.data[i].pic = res.data[i].picture.data.url;
+			}
+			res.data.push({
+				id: KillBill.appCtrl.userData.id,
+				name: KillBill.appCtrl.userData.name
+			});
 			KillBill.appCtrl.setData('fbFriends', res.data);
-			KillBill.appCtrl.setData('selectedFriends', []);
+			KillBill.appCtrl.setData('selectedFriends', {content: []});
 			callback();
 		});
 	}

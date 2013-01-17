@@ -3,7 +3,7 @@
 
 KillBill.home = M.PageView.design({
 
-	childViews: 'tabs content header',
+	childViews: 'tabs content friendList header',
 
 	events: {
         pageshow: {
@@ -34,6 +34,28 @@ KillBill.home = M.PageView.design({
             isEditable: NO
     	})
     }),
+
+    friendList: M.ListView.design({
+		cssClass: 'friendsList',
+		idName: 'id',
+		usesDefaultSearchBehaviour: YES,
+		listItemTemplateView: M.ListItemView.design({
+			childViews: 'pic name amt',
+			name: M.LabelView.design({
+				valuePattern: '<div style="margin-left:70px"><%= name %></div>'
+			}),
+			amt: M.LabelView.design({
+				valuePattern: '<div style="margin-left:70px"><%= amt %></div>'
+			}),
+			pic: M.LabelView.design({
+				valuePattern: '<img src="<%= pic %>" /> '
+			}),
+		}),
+		contentBinding:{
+			target: KillBill.appCtrl,
+			property: 'summaryList'
+		}
+	}),
 
     header: KillBill.header,
 

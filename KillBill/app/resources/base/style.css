@@ -5,11 +5,22 @@
 }
 
 /* line 8, ../sass/sass/style.scss */
+.left {
+  float: left;
+  margin-left: 15px;
+}
+
+/* line 13, ../sass/sass/style.scss */
+.clearLeft {
+  clear: left;
+}
+
+/* line 17, ../sass/sass/style.scss */
 .loginLabel {
   text-align: center;
 }
 
-/* line 12, ../sass/sass/style.scss */
+/* line 21, ../sass/sass/style.scss */
 .fbLogin {
   text-align: center;
   background-color: #5F78AB;
@@ -28,58 +39,119 @@
   width: 130px;
 }
 
-/* line 30, ../sass/sass/style.scss */
+/* line 39, ../sass/sass/style.scss */
 .dashboard {
   font-size: 20px;
 }
-/* line 32, ../sass/sass/style.scss */
+/* line 41, ../sass/sass/style.scss */
 .dashboard .tmp-dashboard-item {
   margin-top: 20px;
 }
 
-/* line 38, ../sass/sass/style.scss */
+/* line 47, ../sass/sass/style.scss */
 .required:after {
   content: '*';
 }
 
-/* line 43, ../sass/sass/style.scss */
+/* line 52, ../sass/sass/style.scss */
 .header {
   font-size: 20px;
   margin: 5px 15px 0;
 }
 
-/* line 48, ../sass/sass/style.scss */
+/* line 57, ../sass/sass/style.scss */
 .inputLabel {
   display: inline-block;
 }
 
-/* line 52, ../sass/sass/style.scss */
+/* line 61, ../sass/sass/style.scss */
 .instruction {
   font-style: italic;
   margin-left: 10px;
 }
 
-/* line 57, ../sass/sass/style.scss */
+/* line 66, ../sass/sass/style.scss */
 .button {
   display: inline-block;
+  margin-left: 10px;
 }
-/* line 60, ../sass/sass/style.scss */
+/* line 70, ../sass/sass/style.scss */
 .button.right .ui-icon-arrow-r {
   right: 10px;
   left: auto;
 }
-/* line 65, ../sass/sass/style.scss */
+/* line 75, ../sass/sass/style.scss */
 .button.right.ui-btn-icon-left .ui-btn-text {
   top: 1px;
   padding-left: 15px;
 }
-/* line 69, ../sass/sass/style.scss */
+/* line 79, ../sass/sass/style.scss */
 .button.right.ui-btn-icon-left .ui-btn-inner {
   padding-left: 0;
   padding-right: 40px;
 }
 
-/* line 77, ../sass/sass/style.scss */
+/* line 87, ../sass/sass/style.scss */
 .ui-listview-filter {
-  margin: 0;
+  margin: 0 auto;
+  width: 98%;
+}
+
+/* line 92, ../sass/sass/style.scss */
+.friendsList {
+  height: 290px;
+  margin: 0 auto 10px;
+  overflow: auto;
+  width: 98%;
+}
+/* line 98, ../sass/sass/style.scss */
+.friendsList li img {
+  float: left;
+}
+
+/* line 104, ../sass/sass/style.scss */
+.hide {
+  display: none;
+}
+
+/* line 108, ../sass/sass/style.scss */
+.removeIcon, .editIcon, .checkIcon {
+  cursor: pointer;
+  margin: auto;
+}
+
+/* line 113, ../sass/sass/style.scss */
+.selectedFriends {
+  margin: 10px auto;
+  width: 98%;
+}
+/* line 117, ../sass/sass/style.scss */
+.selectedFriends thead tr {
+  background-color: #aaa;
+}
+/* line 124, ../sass/sass/style.scss */
+.selectedFriends tbody tr .tmp-table-td {
+  clear: none;
+}
+/* line 126, ../sass/sass/style.scss */
+.selectedFriends tbody tr .tmp-table-td input {
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+  margin: 0 25%;
+  padding-left: 3px;
+  padding-top: 2px;
+  width: 50%;
+}
+/* line 135, ../sass/sass/style.scss */
+.selectedFriends tbody tr:nth-child(odd) {
+  background-color: #eaeaea;
+}
+/* line 138, ../sass/sass/style.scss */
+.selectedFriends tbody tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+/* line 146, ../sass/sass/style.scss */
+.amtBox .userAmt {
+  display: inline-block;
 }
